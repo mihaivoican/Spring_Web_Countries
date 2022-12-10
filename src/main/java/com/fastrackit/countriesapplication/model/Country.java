@@ -10,6 +10,7 @@ import java.util.Objects;
 @AllArgsConstructor
 @Getter
 @Setter
+
 public class Country {
     //name|capital|population|area|continent|neighbour1~neighbour2
     private long id;

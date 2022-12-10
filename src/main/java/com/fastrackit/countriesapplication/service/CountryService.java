@@ -1,5 +1,6 @@
 package com.fastrackit.countriesapplication.service;
 
+import com.fastrackit.countriesapplication.exception.ResourceNotFoundException;
 import com.fastrackit.countriesapplication.model.Country;
 import org.springframework.stereotype.Service;
 
@@ -36,8 +37,8 @@ public class CountryService {
         return countries.stream()
                 .filter(c -> c.getId() == id)
                 .findFirst()
-               .orElseThrow(() -> new RuntimeException());           //asa era initial pana sa-mi definesc eu exceptiile (tip unchecked/care nu se declara la incep metodei)
-//                .orElseThrow(() -> new ResourceNotFoundException("Country missing", id));
+//               .orElseThrow(() -> new RuntimeException());           //asa era initial pana sa-mi definesc eu exceptiile (tip unchecked/care nu se declara la incep metodei)
+                .orElseThrow(() -> new ResourceNotFoundException("Country missing", id));
     }
 
     //metoda delete de regula e bine sa returneze ob sters
