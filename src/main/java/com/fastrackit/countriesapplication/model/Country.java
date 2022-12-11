@@ -4,23 +4,37 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.*;
 import java.util.List;
 import java.util.Objects;
+
+
+import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
 @Getter
 @Setter
+@Entity
+@NoArgsConstructor
 public class Country {
     //name|capital|population|area|continent|neighbour1~neighbour2
+    @Id
+    @GeneratedValue
     private long id;
+    @Column
     private String name;
+    @Column
     private String capital;
+    @Column
     private long population;
+    @Column
     private int area;
+    @Column
     private String continent;
+    @Transient
     private List<String> neighbours;
 
-    @Override       //rescriu ac metoda ca sa identific 2 tari ca fiind egale/aceleasi daca au acelasi id
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
