@@ -21,8 +21,8 @@ public class ServiceController {
         return transactionService.getAll();
     }
 
-    @PostMapping
-    public Transaction add(Transaction transaction){
-        return transactionService.add(transaction);
-    }
+//    @PostMapping
+//    public Transaction add(Transaction transaction){
+//        return transactionService.add(transaction);
+//    }
 }

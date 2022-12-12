@@ -1,7 +1,6 @@
 package com.fastrackit.countriesapplication.model;
 
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,11 +8,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-@Data
-@Builder
+@AllArgsConstructor
+@Getter
+@Setter
+//@Builder
 public class Transaction {
     @Id
-    @GeneratedValue
+//    @GeneratedValue
     @Column
     private long id;
     @Column
