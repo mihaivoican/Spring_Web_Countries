@@ -73,12 +73,23 @@ public class TransactionService {
     }
 
     //caut dupa ID
-    public Optional<Transaction> getById(Long id){
-        return transactionRepository.findById(id);
+    public Transaction getById(Long id){
+        return transactionRepository.findById(id)
+                .orElseThrow(() ->new ResourceNotFoundException("Nu gasesc tranzactia",id));
     }
 
+    //metoda de insert
     public Transaction add(Transaction transaction){
         return transactionRepository.save(transaction);     //asa se adauga in baza
+    }
+
+    //metoda de update
+    public Transaction update(long id, Transaction transaction){
+        Transaction transToUpdate = getById(id);
+        transToUpdate.setProduct(transaction.getProduct());
+        transToUpdate.setType(transaction.getType());
+        transToUpdate.setAmount(transaction.getAmount());
+        return transToUpdate;
     }
 
 }

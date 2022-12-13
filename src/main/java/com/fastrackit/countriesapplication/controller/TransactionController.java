@@ -42,8 +42,7 @@ public class TransactionController {
 
     @GetMapping("{id}") //GET http://host:port/transactions/2
     public Transaction getById(@PathVariable long id){
-        return transactionService.getById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("N-am gasit tranzactia",id ));
+        return transactionService.getById(id);
     }
 
 
@@ -52,5 +51,9 @@ public class TransactionController {
         return transactionService.add(transaction);
     }
 
-
+//metoda update
+    @PutMapping("{id}")
+    public Transaction update(@PathVariable long id,@RequestBody Transaction transaction){
+        return transactionService.update(id,transaction);
+    }
 }
