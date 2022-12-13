@@ -12,7 +12,7 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @Builder
-@NoArgsConstructor
+@NoArgsConstructor      //asa se cere la toate entitatile
 public class Transaction {
     @Id
     @GeneratedValue
