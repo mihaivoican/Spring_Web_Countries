@@ -1,11 +1,12 @@
 package com.fastrackit.countriesapplication.service;
 
+import com.fastrackit.countriesapplication.exception.ResourceNotFoundException;
 import com.fastrackit.countriesapplication.model.Transaction;
 import com.fastrackit.countriesapplication.model.TransactionType;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Stream;
+import java.util.Optional;
 
 @Service
 public class TransactionService {
@@ -69,6 +70,11 @@ public class TransactionService {
     //cu 3 filtre
     public List<Transaction> getByTypeAndMinAndMax(TransactionType type,Double minAmount, Double maxAmount) {
         return transactionRepository.findByTypeAndMinAndMax(type,minAmount, maxAmount);
+    }
+
+    //caut dupa ID
+    public Optional<Transaction> getById(Long id){
+        return transactionRepository.findById(id);
     }
 
 }

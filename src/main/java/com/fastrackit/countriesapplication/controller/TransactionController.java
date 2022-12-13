@@ -1,13 +1,11 @@
 package com.fastrackit.countriesapplication.controller;
 
+import com.fastrackit.countriesapplication.exception.ResourceNotFoundException;
 import com.fastrackit.countriesapplication.model.Transaction;
 import com.fastrackit.countriesapplication.model.TransactionType;
 import com.fastrackit.countriesapplication.service.TransactionService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -41,8 +39,16 @@ public class TransactionController {
         }
         return null;
     }
+
+    @GetMapping("{id}") //GET http://host:port/transactions/2
+    public Transaction getById(@PathVariable long id){
+        return transactionService.getById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("N-am gasit tranzactia",id ));
+    }
 //    @PostMapping
 //    public Transaction add(Transaction transaction){
 //        return transactionService.add(transaction);
 //    }
+
+
 }
