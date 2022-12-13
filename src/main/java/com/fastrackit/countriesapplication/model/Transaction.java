@@ -11,10 +11,11 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @Getter
 @Setter
-//@Builder
+@Builder
+@NoArgsConstructor
 public class Transaction {
     @Id
-//    @GeneratedValue
+    @GeneratedValue
     @Column
     private long id;
     @Column
