@@ -21,7 +21,6 @@ public class TransactionService {
         System.out.println("Finished reading transactions");
     }
 
-//    private static long id=0;       //pt id tranzactie
 
 //    public Transaction add(Transaction transaction){
 //        Transaction newTransaction=Transaction.builder()
@@ -33,6 +32,7 @@ public class TransactionService {
 //        transactions.add(newTransaction);
 //        return newTransaction;
 //    }
+
 
     //returnez tranzactii: toate sau filtrate
     public List<Transaction> getAll() {
@@ -75,6 +75,10 @@ public class TransactionService {
     //caut dupa ID
     public Optional<Transaction> getById(Long id){
         return transactionRepository.findById(id);
+    }
+
+    public Transaction add(Transaction transaction){
+        return transactionRepository.save(transaction);     //asa se adauga in baza
     }
 
 }

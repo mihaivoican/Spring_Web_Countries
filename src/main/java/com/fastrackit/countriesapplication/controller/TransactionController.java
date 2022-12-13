@@ -45,10 +45,12 @@ public class TransactionController {
         return transactionService.getById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("N-am gasit tranzactia",id ));
     }
-//    @PostMapping
-//    public Transaction add(Transaction transaction){
-//        return transactionService.add(transaction);
-//    }
+
+
+    @PostMapping    //POST http://host:port/transactions
+    public Transaction add(@RequestBody Transaction transaction){
+        return transactionService.add(transaction);
+    }
 
 
 }
