@@ -75,7 +75,8 @@ public class TransactionService {
     //caut dupa ID
     public Transaction getById(Long id){
         return transactionRepository.findById(id)
-                .orElseThrow(() ->new ResourceNotFoundException("Nu gasesc tranzactia",id));
+//                .orElseThrow(() ->new RuntimeException());        //asta e eroarea generica
+                .orElseThrow(() ->new ResourceNotFoundException("Nu gasesc tranzactia CU ID=",id)); //eroarea prelucrata de noi: vezi folder exception, + cod tratare err in folder controller
     }
 
     //metoda de insert
@@ -91,5 +92,9 @@ public class TransactionService {
         transToUpdate.setAmount(transaction.getAmount());
         return transToUpdate;
     }
+
+    //metoda delete
+
+
 
 }
