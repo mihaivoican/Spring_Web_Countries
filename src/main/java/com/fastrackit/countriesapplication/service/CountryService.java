@@ -1,16 +1,12 @@
 package com.fastrackit.countriesapplication.service;
 
 
+import com.fastrackit.countriesapplication.exception.ResourceNotFoundException;
+import com.fastrackit.countriesapplication.model.City;
+import com.fastrackit.countriesapplication.model.Country;
+import org.springframework.stereotype.Service;
 
-        import com.fastrackit.countriesapplication.exception.ResourceNotFoundException;
-        import com.fastrackit.countriesapplication.model.Country;
-
-
-        import org.springframework.stereotype.Service;
-
-        import java.util.List;
-
-
+import java.util.List;
 
 @Service
 public class CountryService {
@@ -27,8 +23,7 @@ public class CountryService {
     }
 
     public List<Country> getByContinent(String continent) {
-//        return countryRepository.findByContinent(continent); merge si ac metoda cu prima metoda custom din repository
-        return countryRepository.findByContinentByQuery(continent); //e varianta 2; apelez a2a  metoda custom din Repository
+        return countryRepository.findByContinentByQuery(continent);
     }
 
     //get countries that neighbor X but not neighbor Y :-> returns list of Country objects
@@ -62,7 +57,32 @@ public class CountryService {
         countryToBeUpdated.setName(country.getName());
         countryToBeUpdated.setNeighbours(country.getNeighbours());
         countryToBeUpdated.setPopulation(country.getPopulation());
-        return countryToBeUpdated;
+        return countryRepository.save(countryToBeUpdated);
     }
 
+    public List<Country> getCountriesFiltered(String continent, Long minPopulation, Long maxPopulation) {
+        return countryRepository.getByContinentAndMinPopulationAndMaxPopulation(continent, minPopulation, maxPopulation);
+    }
+
+    public Country patch(long id, String capital, long diffPopulation) {
+        Country countryToBeUpdated = getById((int) id);
+        countryToBeUpdated.setCapital(new City(capital));
+        countryToBeUpdated.setPopulation(countryToBeUpdated.getPopulation() + diffPopulation);
+        return countryRepository.save(countryToBeUpdated);
+    }
+
+    public Country addCityToCountry(int id, City city) {
+        Country country = getById(id);
+        city.setCountry(country);
+        country.getCities().add(city);
+        return countryRepository.save(country);
+    }
+
+    public Country addNeighbourToCountry(int id, int neighbourId) {
+        Country country = getById(id);
+        Country neighbour = getById(neighbourId);
+        country.getNeighboursCountries().add(neighbour);
+        neighbour.getNeighboursCountries().add(country);
+        return countryRepository.save(country);
+    }
 }

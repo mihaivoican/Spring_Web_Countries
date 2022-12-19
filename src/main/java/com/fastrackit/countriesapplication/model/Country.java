@@ -23,7 +23,7 @@ public class Country {
     private long id;
     @Column
     private String name;
-    @Column
+    @OneToOne(cascade = CascadeType.PERSIST)
     private String capital;
     @Column
     private long population;
