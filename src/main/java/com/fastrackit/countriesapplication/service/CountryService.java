@@ -62,7 +62,7 @@ public class CountryService {
         countryToBeUpdated.setName(country.getName());
         countryToBeUpdated.setNeighbours(country.getNeighbours());
         countryToBeUpdated.setPopulation(country.getPopulation());
-        return countryToBeUpdated;
+        return countryRepository.save(countryToBeUpdated);
     }
 
 }
