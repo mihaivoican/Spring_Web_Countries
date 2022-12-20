@@ -3,6 +3,7 @@ package com.fastrackit.countriesapplication.controller;
 
 
 import com.fastrackit.countriesapplication.controller.dto.CountryOverviewDTO;
+import com.fastrackit.countriesapplication.controller.dto.DeleteCountryResponse;
 import com.fastrackit.countriesapplication.controller.dto.PatchCountryRequest;
 import com.fastrackit.countriesapplication.model.City;
 import com.fastrackit.countriesapplication.model.Country;
@@ -38,8 +39,14 @@ public class CountryController {
     }
 
     @DeleteMapping("{id}") // DELETE http://host:port/countries/3
-    public Country deleteById(@PathVariable int id) {
-        return countryService.deleteById(id);
+    //functioneaza si cod de mai jos comentat; dar nu intoarce un mesaj chiar frumos.
+//    public Country deleteById(@PathVariable int id) {
+//        return countryService.deleteById(id);
+//    }
+    //aici e a doua varianta de cod imbunatatita; nu mai intorc tara cu totul ci numai un ob cu status + mesaj la stergere
+    public DeleteCountryResponse deleteById(@PathVariable int id) {
+        countryService.deleteById(id);
+        return new DeleteCountryResponse(true,"country was deleted");
     }
 
     @PostMapping // POST http://host:port/countries
@@ -52,6 +59,7 @@ public class CountryController {
         return countryService.update(id, country);
     }
 
+   //metoda de update partial
     @PatchMapping("{id}")
     public Country patch(@PathVariable long id, @RequestBody PatchCountryRequest request) {
         return countryService.patch(id, request.capital(), request.diffPopulation());
