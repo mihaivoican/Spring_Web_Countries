@@ -1,5 +1,5 @@
 Afghanistan|Kabul|27657145|652230|Asia|IRN~PAK~TKM~UZB~TJK~CHN
-Aland Islands|Mariehamn|28875|1580|Europe|
+Åland Islands|Mariehamn|28875|1580|Europe|
 Albania|Tirana|2886026|28748|Europe|MNE~GRC~MKD~KOS
 Algeria|Algiers|40400000|2381741|Africa|TUN~LBY~NER~ESH~MRT~MLI~MAR
 American Samoa|Pago Pago|57100|199|Oceania|
@@ -27,7 +27,7 @@ Bolivia (Plurinational State of)|Sucre|10985059|1098581|Americas|ARG~BRA~CHL~PRY
 Bonaire, Sint Eustatius and Saba|Kralendijk|17408|294|Americas|
 Bosnia and Herzegovina|Sarajevo|3531159|51209|Europe|HRV~MNE~SRB
 Botswana|Gaborone|2141206|582000|Africa|NAM~ZAF~ZMB~ZWE
-Brazil|Bras�lia|206135893|8515767|Americas|ARG~BOL~COL~GUF~GUY~PRY~PER~SUR~URY~VEN
+Brazil|Brasília|206135893|8515767|Americas|ARG~BOL~COL~GUF~GUY~PRY~PER~SUR~URY~VEN
 British Indian Ocean Territory|Diego Garcia|3000|60|Africa|
 Virgin Islands (British)|Road Town|28514|151|Americas|
 Virgin Islands (U.S.)|Charlotte Amalie|114743|346|Americas|
@@ -36,7 +36,7 @@ Bulgaria|Sofia|7153784|110879|Europe|GRC~MKD~ROU~SRB~TUR
 Burkina Faso|Ouagadougou|19034397|272967|Africa|BEN~CIV~GHA~MLI~NER~TGO
 Burundi|Bujumbura|10114505|27834|Africa|COD~RWA~TZA
 Cambodia|Phnom Penh|15626444|181035|Asia|LAO~THA~VNM
-Cameroon|Yaound�|22709892|475442|Africa|CAF~TCD~COG~GNQ~GAB~NGA
+Cameroon|Yaoundé|22709892|475442|Africa|CAF~TCD~COG~GNQ~GAB~NGA
 Canada|Ottawa|36155487|9984670|Americas|USA
 Cabo Verde|Praia|531239|4033|Africa|
 Cayman Islands|George Town|58238|264|Americas|
@@ -46,15 +46,15 @@ Chile|Santiago|18191900|756102|Americas|ARG~BOL~PER
 China|Beijing|1377422166|9640011|Asia|AFG~BTN~MMR~HKG~IND~KAZ~PRK~KGZ~LAO~MAC~MNG~PAK~RUS~TJK~VNM
 Christmas Island|Flying Fish Cove|2072|135|Oceania|
 Cocos (Keeling) Islands|West Island|550|14|Oceania|
-Colombia|Bogot�|48759958|1141748|Americas|BRA~ECU~PAN~PER~VEN
+Colombia|Bogotá|48759958|1141748|Americas|BRA~ECU~PAN~PER~VEN
 Comoros|Moroni|806153|1862|Africa|
 Congo|Brazzaville|4741000|342000|Africa|AGO~CMR~CAF~COD~GAB
 Congo (Democratic Republic of the)|Kinshasa|85026000|2344858|Africa|AGO~BDI~CAF~COG~RWA~SSD~TZA~UGA~ZMB
 Cook Islands|Avarua|18100|236|Oceania|
-Costa Rica|San Jos�|4890379|51100|Americas|NIC~PAN
+Costa Rica|San José|4890379|51100|Americas|NIC~PAN
 Croatia|Zagreb|4190669|56594|Europe|BIH~HUN~MNE~SRB~SVN
 Cuba|Havana|11239004|109884|Americas|
-Cura�ao|Willemstad|154843|444|Americas|
+Curaçao|Willemstad|154843|444|Americas|
 Cyprus|Nicosia|847000|9251|Europe|GBR
 Czech Republic|Prague|10558524|78865|Europe|AUT~DEU~POL~SVK
 Denmark|Copenhagen|5717014|43094|Europe|DEU
@@ -69,12 +69,12 @@ Eritrea|Asmara|5352000|117600|Africa|DJI~ETH~SDN
 Estonia|Tallinn|1315944|45227|Europe|LVA~RUS
 Ethiopia|Addis Ababa|92206005|1104300|Africa|DJI~ERI~KEN~SOM~SSD~SDN
 Falkland Islands (Malvinas)|Stanley|2563|12173|Americas|
-Faroe Islands|T�rshavn|49376|1393|Europe|
+Faroe Islands|Tórshavn|49376|1393|Europe|
 Fiji|Suva|867000|18272|Oceania|
 Finland|Helsinki|5491817|338424|Europe|NOR~SWE~RUS
 France|Paris|66710000|640679|Europe|AND~BEL~DEU~ITA~LUX~MCO~ESP~CHE
-French Polynesia|Papeete|271800|4167|Oceania|
-French Southern Territories|Port-aux-Fran�ais|140|7747|Africa|
+French Polynesia|Papeetē|271800|4167|Oceania|
+French Southern Territories|Port-aux-Français|140|7747|Africa|
 Gabon|Libreville|1802278|267668|Africa|CMR~COG~GNQ
 Gambia|Banjul|1882450|11295|Africa|SEN
 Georgia|Tbilisi|3720400|69700|Asia|ARM~AZE~RUS~TUR
@@ -84,7 +84,7 @@ Gibraltar|Gibraltar|33140|6|Europe|ESP
 Greece|Athens|10858018|131990|Europe|ALB~BGR~TUR~MKD
 Greenland|Nuuk|55847|2166086|Americas|
 Grenada|St. George's|103328|344|Americas|
-Guam|Hagatna|184200|549|Oceania|
+Guam|Hagåtña|184200|549|Oceania|
 Guatemala|Guatemala City|16176133|108889|Americas|BLZ~SLV~HND~MEX
 Guernsey|St. Peter Port|62999|78|Europe|
 Guinea|Conakry|12947000|245857|Africa|CIV~GNB~LBR~MLI~SEN~SLE
@@ -95,10 +95,10 @@ Holy See|Rome|451|0|Europe|ITA
 Honduras|Tegucigalpa|8576532|112492|Americas|GTM~SLV~NIC
 Hong Kong|City of Victoria|7324300|1104|Asia|CHN
 Hungary|Budapest|9823000|93028|Europe|AUT~HRV~ROU~SRB~SVK~SVN~UKR
-Iceland|Reykjav�k|334300|103000|Europe|
+Iceland|Reykjavík|334300|103000|Europe|
 India|New Delhi|1295210000|3287590|Asia|AFG~BGD~BTN~MMR~CHN~NPL~PAK~LKA
 Indonesia|Jakarta|258705000|1904569|Asia|TLS~MYS~PNG
-C�te d'Ivoire|Yamoussoukro|22671331|322463|Africa|BFA~GHA~GIN~LBR~MLI
+Côte d'Ivoire|Yamoussoukro|22671331|322463|Africa|BFA~GHA~GIN~LBR~MLI
 Iran (Islamic Republic of)|Tehran|79369900|1648195|Asia|AFG~ARM~AZE~IRQ~PAK~TUR~TKM
 Iraq|Baghdad|37883543|438317|Asia|IRN~JOR~KWT~SAU~SYR~TUR
 Ireland|Dublin|6378000|70273|Europe|GBR
@@ -127,7 +127,7 @@ Macedonia (the former Yugoslav Republic of)|Skopje|2058539|25713|Europe|ALB~BGR~
 Madagascar|Antananarivo|22434363|587041|Africa|
 Malawi|Lilongwe|16832910|118484|Africa|MOZ~TZA~ZMB
 Malaysia|Kuala Lumpur|31405416|330803|Asia|BRN~IDN~THA
-Maldives|Mal�|344023|300|Asia|
+Maldives|Malé|344023|300|Asia|
 Mali|Bamako|18135000|1240192|Africa|DZA~BFA~GIN~CIV~MRT~NER~SEN
 Malta|Valletta|425384|316|Europe|
 Marshall Islands|Majuro|54880|181|Oceania|
@@ -135,7 +135,7 @@ Mauritania|Nouakchott|3718678|1030700|Africa|DZA~MLI~SEN~ESH
 Mauritius|Port Louis|1262879|2040|Africa|
 Mexico|Mexico City|122273473|1964375|Americas|BLZ~GTM~USA
 Micronesia (Federated States of)|Palikir|102800|702|Oceania|
-Moldova (Republic of)|Chi?in�u|3553100|33846|Europe|ROU~UKR
+Moldova (Republic of)|Chișinău|3553100|33846|Europe|ROU~UKR
 Monaco|Monaco|38400|2|Europe|FRA
 Mongolia|Ulan Bator|3093100|1564110|Asia|CHN~RUS
 Montenegro|Podgorica|621810|13812|Europe|ALB~BIH~HRV~KOS~SRB
@@ -147,7 +147,7 @@ Namibia|Windhoek|2324388|825615|Africa|AGO~BWA~ZAF~ZMB
 Nauru|Yaren|10084|21|Oceania|
 Nepal|Kathmandu|28431500|147181|Asia|CHN~IND
 Netherlands|Amsterdam|17019800|41850|Europe|BEL~DEU
-New Caledonia|Noum�a|268767|18575|Oceania|
+New Caledonia|Nouméa|268767|18575|Oceania|
 New Zealand|Wellington|4697854|270467|Oceania|
 Nicaragua|Managua|6262703|130373|Americas|CRI~HND
 Niger|Niamey|20715000|1267000|Africa|DZA~BEN~BFA~TCD~LBY~MLI~NGA
@@ -162,7 +162,7 @@ Pakistan|Islamabad|194125062|881912|Asia|AFG~CHN~IND~IRN
 Palau|Ngerulmud|17950|459|Oceania|
 Panama|Panama City|3814672|75417|Americas|COL~CRI
 Papua New Guinea|Port Moresby|8083700|462840|Oceania|IDN
-Paraguay|Asuncion|6854536|406752|Americas|ARG~BOL~BRA
+Paraguay|Asunción|6854536|406752|Americas|ARG~BOL~BRA
 Peru|Lima|31488700|1285216|Americas|BOL~BRA~CHL~COL~ECU
 Philippines|Manila|103279800|342353|Asia|
 Pitcairn|Adamstown|56|47|Oceania|
@@ -174,7 +174,7 @@ Republic of Kosovo|Pristina|1733842|10908|Europe|ALB~MKD~MNE~SRB
 Romania|Bucharest|19861408|238391|Europe|BGR~HUN~MDA~SRB~UKR
 Russian Federation|Moscow|146599183|17124442|Europe|AZE~BLR~CHN~EST~FIN~GEO~KAZ~PRK~LVA~LTU~MNG~NOR~POL~UKR
 Rwanda|Kigali|11553188|26338|Africa|BDI~COD~TZA~UGA
-Saint Barth�lemy|Gustavia|9417|21|Americas|
+Saint Barthélemy|Gustavia|9417|21|Americas|
 Saint Kitts and Nevis|Basseterre|46204|261|Americas|
 Saint Lucia|Castries|186000|616|Americas|
 Saint Martin (French part)|Marigot|36979|53|Americas|SXM~NLD
@@ -182,7 +182,7 @@ Saint Pierre and Miquelon|Saint-Pierre|6069|242|Americas|
 Saint Vincent and the Grenadines|Kingstown|109991|389|Americas|
 Samoa|Apia|194899|2842|Oceania|
 San Marino|City of San Marino|33005|61|Europe|ITA
-Sao Tome and Principe|Sao Tom�|187356|964|Africa|
+Sao Tome and Principe|São Tomé|187356|964|Africa|
 Saudi Arabia|Riyadh|32248200|2149690|Asia|IRQ~JOR~KWT~OMN~QAT~ARE~YEM
 Senegal|Dakar|14799859|196722|Africa|GMB~GIN~GNB~MLI~MRT
 Serbia|Belgrade|7076372|88361|Europe|BIH~BGR~HRV~HUN~KOS~MKD~MNE~ROU
@@ -210,7 +210,7 @@ Tajikistan|Dushanbe|8593600|143100|Asia|AFG~CHN~KGZ~UZB
 Tanzania, United Republic of|Dodoma|55155000|945087|Africa|BDI~COD~KEN~MWI~MOZ~RWA~UGA~ZMB
 Thailand|Bangkok|65327652|513120|Asia|MMR~KHM~LAO~MYS
 Timor-Leste|Dili|1167242|14874|Asia|IDN
-Togo|Lom�|7143000|56785|Africa|BEN~BFA~GHA
+Togo|Lomé|7143000|56785|Africa|BEN~BFA~GHA
 Tokelau|Fakaofo|1411|12|Oceania|
 Tonga|Nuku'alofa|103252|747|Oceania|
 Trinidad and Tobago|Port of Spain|1349667|5130|Americas|
@@ -230,7 +230,7 @@ Vanuatu|Port Vila|277500|12189|Oceania|
 Venezuela (Bolivarian Republic of)|Caracas|31028700|916445|Americas|BRA~COL~GUY
 Viet Nam|Hanoi|92700000|331212|Asia|KHM~CHN~LAO
 Wallis and Futuna|Mata-Utu|11750|142|Oceania|
-Western Sahara|El Aai�n|510713|266000|Africa|DZA~MRT~MAR
+Western Sahara|El Aaiún|510713|266000|Africa|DZA~MRT~MAR
 Yemen|Sana'a|27478000|527968|Asia|OMN~SAU
 Zambia|Lusaka|15933883|752612|Africa|AGO~BWA~COD~MWI~MOZ~NAM~TZA~ZWE
 Zimbabwe|Harare|14240168|390757|Africa|BWA~MOZ~ZAF~ZMB
