@@ -71,10 +71,12 @@ public class CountryService {
         return countryRepository.save(countryToBeUpdated);
     }
 
+
+    //metoda de a adauga orase la o tara (pt a exemplifica relat 1 to many)
     public Country addCityToCountry(int id, City city) {
-        Country country = getById(id);
-        city.setCountry(country);
-        country.getCities().add(city);
+        Country country = getById(id);      //gasesc tara dupa id
+        city.setCountry(country);       //e nevoie si de a seta tara in ob oras
+        country.getCities().add(city);      //si de a seta/adauga orasul in ob tara (la colectia de orase a tarii) fiindca am definit relatia in ambele entitati
         return countryRepository.save(country);
     }
 

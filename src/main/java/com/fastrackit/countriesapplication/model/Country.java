@@ -35,8 +35,15 @@ public class Country {
     private long id;
     @Column(name = "country_name", unique = true, columnDefinition = "varchar(2000)")
     private String name;
+    //tipul de cascada de mai jos faca ca la stergere tara sa nu stearga si oras; daca pun tip all la stargere parinte sterge si copil
     @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private City capital;
+
+    //rel 1 la many; o tara are mai multe orase
+    //FK-ul se salv pe tabela de many; pt noi e la City. Daca nu definim in City nimic el va face o tabela separata cu id-uri de country si city ca la many to many
+    //atunci pun aici mappedby si col din cealalta tabela care defineste relatia ->country si hybernate va pune un country_id la obiectul city
+    //MARE ATENTIE: asta va ingreuna selecturile chiar si numai pe 1 tara; in spate el face inca unul pt a aduce lista de orase
+    //ca sa nu pierd orasele pot pune param fetch cu lazy, ca sa ceara si orase numai la nevoie
     @OneToMany(mappedBy = "country", cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY)
     private List<City> cities;
     @Column
