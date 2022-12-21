@@ -34,7 +34,7 @@ public class CountryController {
     public Country getById(@PathVariable int id) {
         Country country = countryService.getById(id);
         System.out.println("Before calling for cities");
-        country.getCities().stream().count();
+        country.getCities().stream().count();       //facem o fortare de apelare a oraselor ca sa vad cum lucreaza fetch cu laizy pe relatia dintre tabele
         return country;
     }
 
@@ -49,11 +49,13 @@ public class CountryController {
         return new DeleteCountryResponse(true,"country was deleted");
     }
 
+    //adaugare tara
     @PostMapping // POST http://host:port/countries
     public Country add(@RequestBody Country country) {
         return countryService.add(country);
     }
 
+    //actualizare tara
     @PutMapping("{id}")
     public Country update(@PathVariable int id, @RequestBody Country country) {
         return countryService.update(id, country);
@@ -65,11 +67,14 @@ public class CountryController {
         return countryService.patch(id, request.capital(), request.diffPopulation());
     }
 
+    //adaugare oras intr-o tara
     @PostMapping("{id}/cities")
     Country addCityToCountry(@PathVariable int id, @RequestBody City city){
         return countryService.addCityToCountry(id, city);
     }
 
+
+    //adaugare vecin; in url scriu doar id-ul de tara de adaugat
     @PostMapping("{id}/neighbours/{neighbourId}")
     Country addNeighbourToCountry(@PathVariable int id, @PathVariable int neighbourId){
         return countryService.addNeighbourToCountry(id, neighbourId);

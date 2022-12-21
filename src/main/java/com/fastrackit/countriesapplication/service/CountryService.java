@@ -80,11 +80,12 @@ public class CountryService {
         return countryRepository.save(country);
     }
 
+    //adaug vecin la o tara; pt a arata rel many to many
     public Country addNeighbourToCountry(int id, int neighbourId) {
-        Country country = getById(id);
-        Country neighbour = getById(neighbourId);
+        Country country = getById(id);      //aduc tara dupa id
+        Country neighbour = getById(neighbourId);       //vecinul ca tara
         country.getNeighboursCountries().add(neighbour);
-        neighbour.getNeighboursCountries().add(country);
+        neighbour.getNeighboursCountries().add(country); //daca o pastram ac line se adauga de 2 ori la tabela de legatura si Ro-Ungaria si Ungaria-Ro; dar asa e corect cand caut tara dupa id, regasesc vecini la ambele tari
         return countryRepository.save(country);
     }
 }

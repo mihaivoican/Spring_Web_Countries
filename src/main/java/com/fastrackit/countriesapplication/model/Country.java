@@ -43,8 +43,9 @@ public class Country {
     //FK-ul se salv pe tabela de many; pt noi e la City. Daca nu definim in City nimic el va face o tabela separata cu id-uri de country si city ca la many to many
     //atunci pun aici mappedby si col din cealalta tabela care defineste relatia ->country si hybernate va pune un country_id la obiectul city
     //MARE ATENTIE: asta va ingreuna selecturile chiar si numai pe 1 tara; in spate el face inca unul pt a aduce lista de orase
-    //ca sa nu pierd orasele pot pune param fetch cu lazy, ca sa ceara si orase numai la nevoie
+    //ca sa nu pierd orasele pot pune param fetch cu lazy, ca sa ceara si orase numai la nevoie; daca e Eager se aduce odata cu parintele; daca e Lazy doar la cererea pt copil
     @OneToMany(mappedBy = "country", cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY)
+//    @JsonIgnore
     private List<City> cities;
     @Column
     private long population;
@@ -53,11 +54,11 @@ public class Country {
     @Column
     private String continent;
 
-    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE}) //se va genera o tabela suplimentara de legatura, cu id-urile din cele 2 tabele legate
     @JsonIgnore
     private List<Country> neighboursCountries;
 
-    @Transient
+    @Transient      //ignora ac field la comunicarea cu baza de date
     private List<String> neighbours;
 
     @Override
