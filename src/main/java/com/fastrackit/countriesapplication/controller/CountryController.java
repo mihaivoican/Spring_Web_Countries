@@ -26,24 +26,28 @@ public class CountryController {
         }
     }
 
-//    @GetMapping("{id}") // GET http://host:port/countries/3
-//    public Country getById(@PathVariable int id) {
-//        return countryService.getById(id);
-//    }
+    @GetMapping("{id}") // GET http://host:port/countries/3
+    public Country getById(@PathVariable int id) {
+        return countryService.getById(id);
+    }
 
-//    @DeleteMapping("{id}") // DELETE http://host:port/countries/3
-//    public Country deleteById(@PathVariable int id) {
-//        return countryService.deleteById(id);
-//    }
 
+    //stergere tara
+    @DeleteMapping("{id}") // DELETE http://host:port/countries/3
+    public Country deleteById(@PathVariable int id) {
+        return countryService.deleteById(id);
+    }
+
+   //adaugare tara
     @PostMapping // POST http://host:port/countries
     public Country add(@RequestBody Country country) {
         return countryService.add(country);
     }
 
-//    @PutMapping("{id}")
-//    public Country update(@PathVariable int id, @RequestBody Country country) {
-//        return countryService.update(id, country);
-//    }
+   //update tara
+    @PutMapping("{id}")
+    public Country update(@PathVariable int id, @RequestBody Country country) {
+        return countryService.update(id, country);
+    }
 
 }
